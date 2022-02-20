@@ -1,0 +1,15 @@
+
+body {
+  background-image: url('./img/milky_way.jpg');
+  background-size: cover;
+
+}
+
+canvas {
+  background-image: url('./img/mars_planet.jpg');
+  background-size: cover;
+  border: 1px red solid;
+  display:block;
+  margin: 0 auto;
+}
+
