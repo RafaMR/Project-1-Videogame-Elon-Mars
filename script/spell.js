@@ -1,20 +1,20 @@
 const spellImage = new Image();
-spellImage.src = './img/blue_ball.png';
+spellImage.src = './img/shot.png';
 
 class Spell {
 
-    cosntructor (gameInstance , x, y) {
+    constructor (gameInstance , x, y) {
         this.game = gameInstance;
         this.x = x;
         this.y = y;
         this.vy = 20;
-        this.width = 20;
-        this.height = 5;
+        this.width = 200;
+        this.height = 300;
     }
 
 
     runLogic (){
-        this.y += 5;
+        this.y -= 20;
     }
 
     draw () {

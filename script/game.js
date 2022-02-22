@@ -1,10 +1,12 @@
 
+
 class Game {
 
     constructor ( canvasElement) {
 
         this.canvas = canvasElement;
-        this.context = canvasElement.getContext('2d')
+        this.context = canvasElement.getContext('2d');
+        this.score = 0;
         this.player = new Player (this);
         this.enemies = [];
         this.spells = [];
@@ -42,9 +44,9 @@ class Game {
 
     }
 
- 
-    fireSpell () {
-        const spell = new Spell ( this, this.player.x, this.player.y);
+   
+    fireSpell () {  
+        const spell = new Spell ( this, this.player.x + this.player.width /2 - 200 / 2, this.player.y);
         this.spells.push (spell);
     } 
 
@@ -66,18 +68,40 @@ class Game {
           }
 
         for (const enemy of this.enemies) {
+            
             enemy.runLogic();
 
             const intersection = enemy.checkIntersection (this.player);
             if (intersection) {
-                console.log("Are interescting")
+                const indexOfEnemy = this.enemies.indexOf(enemy);
+                this.enemies.splice(indexOfEnemy, 1);
             }
         }
 
 
         for ( const spell of this.spells) {
+            
             spell.runLogic();
+
+            for (const enemy of this.enemies) {
+                
+                const intersection = enemy.checkIntersection (spell);
+                    if (intersection) {
+                        const indexOfEnemy = this.enemies.indexOf(enemy);
+                        this.enemies.splice(indexOfEnemy, 1);
+                        const indexOfSpell = this.spells.indexOf(spell);
+                        this.spells.splice(indexOfSpell, 1);
+                        this.score += 1;
+                    }
+            }
+            
         }
+    }
+
+
+    drawScore (){
+        this.context.font = '48px monospace'
+        this.context.fillText(`Dogecoins ${this.score}`, 750, 50);
     }
 
     
@@ -93,6 +117,7 @@ class Game {
         }
 
         this.player.draw();
+        this.drawScore();
     }
 
 }

@@ -11,7 +11,7 @@ class Enemy  {
     this.vy = 5;
     this.vx = 5;
     this.r = 60;
-    this.gravity = 0.40;
+    this.gravity = 0.50;
     }
 
 
@@ -25,12 +25,12 @@ class Enemy  {
   }
 */
 
-  checkIntersection (player) {
+  checkIntersection (element) {
     return (
-      player.x + player.width > this.x &&
-      player.x < this.x + this.r &&
-      player.y  + player.height > this.y &&
-      player.y < this.y + this.r 
+      element.x + element.width > this.x &&
+      element.x < this.x + this.r &&
+      element.y  + element.height > this.y &&
+      element.y < this.y + this.r 
   );
 }
 

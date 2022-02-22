@@ -13,7 +13,6 @@ class Player  {
         this.width = 100;
         this.height = 200;
         this.speed = 10;
-        this.frame = 1;
     }
 
 
