@@ -3,18 +3,44 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Mars Pang</title>
+    <title>Elon Mars</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
   </head>
+
   <body>
-    <div>
-      <canvas id="canvas" width="1500" height="800"></canvas>
-    </div>
-    </body>
-    <script src="script/spell.js"></script>
-    <script src="script/enemy.js"></script>
-    <script src="script/player.js"></script>
-    <script src="script/game.js"></script>
-    <script src="script/script.js"></script>
+
+  <div class="start_screen" id="start-screen" >
+    <h1>Elon Mars</h1>
+    <h3>Help Elon to earn Dogecoins to conquer Mars</h3>
+    <h2>INSTRUCTIONS</h2>
+      <ul>
+        <li>Space : Shoot</li>
+        <li> Left Arrow : Move left</li>
+        <li> Right Arrow : Move right</li>
+      </ul>
+      <br>
+      <br>
+        <button>Start Game</button>
+  </div>
+
+  <div class="screen" id="playing-screen"  style ="display: none">
+    <canvas id="canvas" width="1500" height="800"></canvas>
+  </div>
+
+  <div class="end_screen" id="game-over-screen" style="display: none">
+    <h1>Mission Failed</h1>
+    <button>Play Again</button>
+  </div>
+
+  <script src="script/spell.js"></script>
+  <script src="script/enemy.js"></script>
+  <script src="script/player.js"></script>
+  <script src="script/game.js"></script>
+  <script src="script/script.js"></script>
+
   </body>
+
 </html>

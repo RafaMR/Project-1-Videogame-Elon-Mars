@@ -14,17 +14,7 @@ class Enemy  {
     this.gravity = 0.50;
     }
 
-
-   /*checkIntersection (element) {
-      return (
-      element.x + element.width > this.x &&
-      element.x < this.x + this.width &&
-      element.y + element.height > this.y &&
-      element.y < this.y + this.height
-    );
-  }
-*/
-
+    
   checkIntersection (element) {
     return (
       element.x + element.width > this.x &&
@@ -53,4 +43,11 @@ class Enemy  {
 
 
 }
+
+//element.x + element.width > this.x &&
+//element.x < this.x &&
+//element.y  + element.height > this.y &&
+//element.y < this.y
+
+
 

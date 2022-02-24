@@ -13,11 +13,12 @@ class Player  {
         this.width = 100;
         this.height = 200;
         this.speed = 10;
+        
     }
 
 
   draw (){
-    this.game.context.drawImage (playerImage, this.x, this.y, this.width, this.height);
+    this.game.context.drawImage (playerImage,this.x, this.y, this.width, this.height);
 }
 
 }

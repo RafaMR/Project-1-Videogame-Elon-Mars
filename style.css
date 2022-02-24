@@ -2,14 +2,66 @@
 body {
   background-image: url('./img/milky_way.jpg');
   background-size: cover;
-
 }
+
+.start_screen {
+  width: 1500px;
+  height: 800px;
+  font-family: 'VT323';
+  font-size: 2em;
+  color: white;
+  background-image: url('./img/astronaut.jpeg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-evenly;
+  margin: 0 auto; 
+  padding-left: 50px;
+} 
+
+.start_screen button {
+  width: 300px;
+  font-family: 'VT323';
+  font-size: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
 
 canvas {
   background-image: url('./img/mars_planet.jpg');
   background-size: cover;
-  border: 1px red solid;
-  display:block;
-  margin: 0 auto;
+  border: 10px red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
 }
 
+
+.end_screen {
+  background-color: black;
+  width: 1500px;
+  height: 800px;
+  font-family: 'VT323';
+  font-size: 4em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
+  }
+
+  .end_screen button {
+    width: 300px;
+    font-family: 'VT323';
+    font-size: 0.5em;
+    padding: 1em;
+    }
+    
+  
