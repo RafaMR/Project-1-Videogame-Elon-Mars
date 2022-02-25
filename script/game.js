@@ -18,6 +18,7 @@ class Game {
         this.player = new Player (this);
         this.score = 0;
         this.enemies = [];
+        this.enemiesJeff = [];
         this.spells = [];
         this.displayScreen('playing');
         this.loop();
@@ -77,6 +78,14 @@ class Game {
 
     }
 
+    generateEnemyJeff () {
+        const enemyX = Math.random() * this.canvas.width;
+        const enemyY = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+        const enemyJeff = new EnemyJeff (this, enemyX,enemyY);
+        this.enemiesJeff.push(enemyJeff);
+
+    }
+    
 //--------------------//
 
     fireSpell () {  
@@ -106,8 +115,17 @@ class Game {
             this.generateEnemy();
           }
 
+        if (Math.random() < 0.002) {
+            this.generateEnemyJeff();
+        }
+        
+
         for (const enemy of this.enemies) {
             this.runEnemyLogic (enemy);
+        }
+
+        for (const enemyJeff of this.enemiesJeff) {
+            this.runEnemyLogic (enemyJeff);
         }
 
 
@@ -119,14 +137,21 @@ class Game {
 //----------------//
     runEnemyLogic (enemy) {
         enemy.runLogic();
-
+        
         const intersection = enemy.checkIntersection (this.player);
+     
         if (intersection) {
             this.lose ();
-            //const indexOfEnemy = this.enemies.indexOf(enemy);
-            //this.enemies.splice(indexOfEnemy, 1);
         }
-        //this.lose () //Player Loses when touches the ball ??
+    }
+
+    runEnemyLogicJeff (enemyJeff) {
+        enemyJeff.runLogic();
+
+        const interesectionJeff = enemyJeff.checkIntersection (this.player);
+        if (interesectionJeff) {
+            this.lose ();
+        }
 
     }
 
@@ -168,10 +193,24 @@ class Game {
         for ( const enemy of this.enemies) {
             enemy.draw();
         }
+        for ( const enemy of this.enemies) {
+            enemy.draw();
+        }
+       for ( const enemyJeff of this.enemiesJeff) {
+            enemyJeff.draw();
+        }
+        /*for ( const enemyJeff of this.enemiesJeff) {
+            enemyJeff.draw();
+        }
+        for ( const enemyJeff of this.enemiesJeff) {
+            enemyJeff.draw();
+        }
+        */
+       
         for ( const spell of this.spells) {
             spell.draw();
         }
-
+        
         this.player.draw();
         this.drawScore();
     }
