@@ -115,7 +115,7 @@ class Game {
             this.generateEnemy();
           }
 
-        if (Math.random() < 0.002) {
+        if (Math.random() < 0.005) {
             this.generateEnemyJeff();
         }
         
@@ -172,6 +172,19 @@ class Game {
                     this.score += 1;
                 }
         }
+
+        for (const enemyJeff of this.enemiesJeff) {
+
+            const intersectionJeff = enemyJeff.checkIntersection (spell);
+            if (intersectionJeff) {
+                const indexOfEnemyJeff = this.enemiesJeff.indexOf(enemyJeff);
+                this.enemiesJeff.splice(indexOfEnemyJeff, 1);
+                const indexOfSpell = this.spells.indexOf(spell);
+                this.spells.splice(indexOfSpell, 1);
+                this.score += 5;
+            }
+
+        }
         
     }
 
@@ -206,7 +219,7 @@ class Game {
             enemyJeff.draw();
         }
         */
-       
+
         for ( const spell of this.spells) {
             spell.draw();
         }
