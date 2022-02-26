@@ -1,7 +1,14 @@
+html,
+body {
+  height: 100%;
+}
 
 body {
   background-image: url('./img/milky_way.jpg');
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .start_screen {
@@ -16,9 +23,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   align-content: space-evenly;
-  margin: 0 auto; 
   padding-left: 50px;
-} 
+}
 
 .start_screen button {
   width: 300px;
@@ -29,8 +35,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
-  
+}
 
 canvas {
   background-image: url('./img/mars_planet.jpg');
@@ -39,9 +44,8 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-
 
 .end_screen {
   background-color: black;
@@ -54,14 +58,11 @@ canvas {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; 
-  }
+}
 
-  .end_screen button {
-    width: 300px;
-    font-family: 'VT323';
-    font-size: 0.5em;
-    padding: 1em;
-    }
-    
-  
+.end_screen button {
+  width: 300px;
+  font-family: 'VT323';
+  font-size: 0.5em;
+  padding: 1em;
+}
