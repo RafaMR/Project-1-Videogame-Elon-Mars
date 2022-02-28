@@ -18,8 +18,10 @@ class Player  {
 
 
   draw (){
+    //this.game.context.fillRect(this.x, this.y, this.width, this.height);
     this.game.context.drawImage (playerImage,this.x, this.y, this.width, this.height);
 }
+
 
 }
 

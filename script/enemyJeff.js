@@ -11,7 +11,7 @@ class EnemyJeff  {
     this.y = y;
     this.vy = 5;
     this.vx = 0;
-    this.r = 150;
+    this.r = 80;
     this.gravity = 1;
     }
 
@@ -32,7 +32,7 @@ class EnemyJeff  {
 
 
     draw () {
-
+        //this.game.context.fillRect(this.x, this.y, this.r * 2, this.r * 2);
         this.game.context.drawImage( enemyJeffImage, this.x, this.y, this.r*2, this.r*2);
         this.game.context.beginPath();
         this.game.context.arc(this.x, this.y, this.r, 0, Math.PI * 2);
