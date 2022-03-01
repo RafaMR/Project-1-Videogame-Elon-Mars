@@ -37,6 +37,18 @@ body {
   align-items: center;
 }
 
+.btn {
+  margin-left: 5px;
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+}
+
+.author{
+  text-align: right;
+  font-size: 40px;
+}
+
 canvas {
   background-image: url('./img/mars_planet.jpg');
   background-size: cover;
@@ -66,3 +78,5 @@ canvas {
   font-size: 0.5em;
   padding: 1em;
 }
+
+

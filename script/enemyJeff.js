@@ -11,7 +11,7 @@ class EnemyJeff  {
     this.y = y;
     this.vy = 5;
     this.vx = 0;
-    this.r = 80;
+    this.r = 60;
     this.gravity = 1;
     }
 

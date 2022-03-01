@@ -108,7 +108,7 @@ class Game {
   //--------------------//
 
   runLogic() {
-    if (Math.random() < 0.01) {
+    if (Math.random() < 0.02) {
       this.generateEnemy();
     }
 
@@ -198,6 +198,12 @@ class Game {
     }
     for (const enemy of this.enemies) {
       enemy.draw();
+    }
+    for (const enemy of this.enemies) {
+      enemy.draw();
+    }
+    for (const enemyJeff of this.enemiesJeff) {
+      enemyJeff.draw();
     }
     for (const enemyJeff of this.enemiesJeff) {
       enemyJeff.draw();
