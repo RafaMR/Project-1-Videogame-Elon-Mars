@@ -60,8 +60,8 @@ class Game {
             break;
         }
       }
-      //this.player.x = clamp(this.player.x, 0, this.canvas.width- this.player.width);
-      //this.player.y = clamp(this.player.y, 0, this.canvas.height -this.player.height);
+      this.player.x = clamp(this.player.x, 0, this.canvas.width- this.player.width);
+      this.player.y = clamp(this.player.y, 0, this.canvas.height -this.player.height);
     });
   }
 
@@ -217,6 +217,6 @@ class Game {
   }
 }
 
-//function clamp (n, min, max) {
-//return Math.min(Math.max(n, min), max);
-// }
+function clamp (n, min, max) {
+return Math.min(Math.max(n, min), max);
+ }
