@@ -7,8 +7,6 @@ https://elon-mars.netlify.app/
 I developed a game where Elon Musk is in Mars and the goal is to collect as many Dogecoins as possible. Jeff Bezzos also appears as an enemy and reaching him adds 5 Dogecoins.
 
 
-Stack
-
 ## Tools used
 
 
