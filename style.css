@@ -4,8 +4,8 @@ body {
 }
 
 :root {
-  --container-width-md: 86%;
-  --container-width-sm: 90%;
+  --container-width-md: 80%;
+  --container-width-sm: 85%;
 }
 
 body {
@@ -90,9 +90,6 @@ canvas {
   .body {
     width: var(--container-width-md);
   }
-  /* section {
-    margin-top: 6rem;
-  } */
 }
 
 /* ------ MEDIA QUERIES (SMALL DEVICES/PHONES) ------- */
@@ -101,7 +98,4 @@ canvas {
   .body {
     width: var(--container-width-sm);
   }
-  /* section > h2 {
-    margin-bottom: 2rem;
-  } */
 }
