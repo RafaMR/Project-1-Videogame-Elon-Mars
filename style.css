@@ -3,6 +3,11 @@ body {
   height: 100%;
 }
 
+:root {
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
 body {
   background-image: url('./img/milky_way.jpg');
   background-size: cover;
@@ -44,7 +49,7 @@ body {
   vertical-align: middle;
 }
 
-.author{
+.author {
   text-align: right;
   font-size: 40px;
 }
@@ -79,4 +84,24 @@ canvas {
   padding: 1em;
 }
 
+/* ------ MEDIA QUERIES (MEDIUM DEVICES/TABLETS) ------- */
 
+@media screen and (max-width: 1024px) {
+  .body {
+    width: var(--container-width-md);
+  }
+  /* section {
+    margin-top: 6rem;
+  } */
+}
+
+/* ------ MEDIA QUERIES (SMALL DEVICES/PHONES) ------- */
+
+@media screen and (max-width: 600px) {
+  .body {
+    width: var(--container-width-sm);
+  }
+  /* section > h2 {
+    margin-bottom: 2rem;
+  } */
+}
